@@ -14,18 +14,10 @@
 		38467113261BC80100D501AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38467112261BC80100D501AA /* Preview Assets.xcassets */; };
 		38467116261BC80100D501AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38467114261BC80100D501AA /* LaunchScreen.storyboard */; };
 		38467121261BC80100D501AA /* CatsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38467120261BC80100D501AA /* CatsAppTests.swift */; };
-		3846712C261BC80100D501AA /* CatsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846712B261BC80100D501AA /* CatsAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3846711D261BC80100D501AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 384670FE261BC80000D501AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38467105261BC80000D501AA;
-			remoteInfo = CatsApp;
-		};
-		38467128261BC80100D501AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 384670FE261BC80000D501AA /* Project object */;
 			proxyType = 1;
@@ -46,9 +38,6 @@
 		3846711C261BC80100D501AA /* CatsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38467120261BC80100D501AA /* CatsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppTests.swift; sourceTree = "<group>"; };
 		38467122261BC80100D501AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38467127261BC80100D501AA /* CatsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3846712B261BC80100D501AA /* CatsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppUITests.swift; sourceTree = "<group>"; };
-		3846712D261BC80100D501AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38467124261BC80100D501AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +63,6 @@
 			children = (
 				38467108261BC80000D501AA /* CatsApp */,
 				3846711F261BC80100D501AA /* CatsAppTests */,
-				3846712A261BC80100D501AA /* CatsAppUITests */,
 				38467107261BC80000D501AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +72,6 @@
 			children = (
 				38467106261BC80000D501AA /* CatsApp.app */,
 				3846711C261BC80100D501AA /* CatsAppTests.xctest */,
-				38467127261BC80100D501AA /* CatsAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,15 +105,6 @@
 				38467120261BC80100D501AA /* CatsAppTests.swift */,
 			);
 			path = CatsAppTests;
-			sourceTree = "<group>";
-		};
-		3846712A261BC80100D501AA /* CatsAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3846712D261BC80100D501AA /* Info.plist */,
-				3846712B261BC80100D501AA /* CatsAppUITests.swift */,
-			);
-			path = CatsAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,24 +145,6 @@
 			productReference = 3846711C261BC80100D501AA /* CatsAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		38467126261BC80100D501AA /* CatsAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38467136261BC80100D501AA /* Build configuration list for PBXNativeTarget "CatsAppUITests" */;
-			buildPhases = (
-				38467123261BC80100D501AA /* Sources */,
-				38467124261BC80100D501AA /* Frameworks */,
-				38467125261BC80100D501AA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38467129261BC80100D501AA /* PBXTargetDependency */,
-			);
-			name = CatsAppUITests;
-			productName = CatsAppUITests;
-			productReference = 38467127261BC80100D501AA /* CatsAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +158,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					3846711B261BC80100D501AA = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 38467105261BC80000D501AA;
-					};
-					38467126261BC80100D501AA = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 38467105261BC80000D501AA;
 					};
@@ -229,7 +178,6 @@
 			targets = (
 				38467105261BC80000D501AA /* CatsApp */,
 				3846711B261BC80100D501AA /* CatsAppTests */,
-				38467126261BC80100D501AA /* CatsAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,13 +194,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3846711A261BC80100D501AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38467125261BC80100D501AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,14 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38467123261BC80100D501AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3846712C261BC80100D501AA /* CatsAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -295,11 +228,6 @@
 			isa = PBXTargetDependency;
 			target = 38467105261BC80000D501AA /* CatsApp */;
 			targetProxy = 3846711D261BC80100D501AA /* PBXContainerItemProxy */;
-		};
-		38467129261BC80100D501AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38467105261BC80000D501AA /* CatsApp */;
-			targetProxy = 38467128261BC80100D501AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,46 +445,6 @@
 			};
 			name = Release;
 		};
-		38467137261BC80100D501AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HS399QXLRD;
-				INFOPLIST_FILE = CatsAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfredohdz.CatsAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CatsApp;
-			};
-			name = Debug;
-		};
-		38467138261BC80100D501AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HS399QXLRD;
-				INFOPLIST_FILE = CatsAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfredohdz.CatsAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CatsApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,15 +471,6 @@
 			buildConfigurations = (
 				38467134261BC80100D501AA /* Debug */,
 				38467135261BC80100D501AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38467136261BC80100D501AA /* Build configuration list for PBXNativeTarget "CatsAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38467137261BC80100D501AA /* Debug */,
-				38467138261BC80100D501AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
