@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		3846710A261BC80000D501AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38467109261BC80000D501AA /* AppDelegate.swift */; };
 		3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710B261BC80000D501AA /* SceneDelegate.swift */; };
-		3846710E261BC80000D501AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710D261BC80000D501AA /* ContentView.swift */; };
+		3846710E261BC80000D501AA /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710D261BC80000D501AA /* BreedsView.swift */; };
 		38467110261BC80100D501AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3846710F261BC80100D501AA /* Assets.xcassets */; };
 		38467113261BC80100D501AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38467112261BC80100D501AA /* Preview Assets.xcassets */; };
 		38467116261BC80100D501AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38467114261BC80100D501AA /* LaunchScreen.storyboard */; };
-		38467121261BC80100D501AA /* CatsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38467120261BC80100D501AA /* CatsAppTests.swift */; };
+		386DE7972656C60400F452EE /* CatsFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386DE7962656C60400F452EE /* CatsFoundation.framework */; };
+		386DE7982656C60400F452EE /* CatsFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 386DE7962656C60400F452EE /* CatsFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		386DE79C2656CCFD00F452EE /* BreedsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE79B2656CCFD00F452EE /* BreedsStore.swift */; };
+		386DE79E2656D8A800F452EE /* BreedsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */; };
+		386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */; };
+		386DE7A22656E12B00F452EE /* PresentableBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A12656E12B00F452EE /* PresentableBreed.swift */; };
+		386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A32656E31900F452EE /* SpinnerView.swift */; };
+		386DE7AA2656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,18 +33,38 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		386DE7992656C60400F452EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				386DE7982656C60400F452EE /* CatsFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		38467106261BC80000D501AA /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38467109261BC80000D501AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3846710B261BC80000D501AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3846710D261BC80000D501AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3846710D261BC80000D501AA /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
 		3846710F261BC80100D501AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38467112261BC80100D501AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38467115261BC80100D501AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38467117261BC80100D501AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3846711C261BC80100D501AA /* CatsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38467120261BC80100D501AA /* CatsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppTests.swift; sourceTree = "<group>"; };
 		38467122261BC80100D501AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		386DE7962656C60400F452EE /* CatsFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CatsFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		386DE79B2656CCFD00F452EE /* BreedsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsStore.swift; sourceTree = "<group>"; };
+		386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsStoreTests.swift; sourceTree = "<group>"; };
+		386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+ImmediateWhenOnMainQueueScheduler.swift"; sourceTree = "<group>"; };
+		386DE7A12656E12B00F452EE /* PresentableBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableBreed.swift; sourceTree = "<group>"; };
+		386DE7A32656E31900F452EE /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386DE7972656C60400F452EE /* CatsFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +92,7 @@
 				38467108261BC80000D501AA /* CatsApp */,
 				3846711F261BC80100D501AA /* CatsAppTests */,
 				38467107261BC80000D501AA /* Products */,
+				386DE7952656C60400F452EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +108,13 @@
 		38467108261BC80000D501AA /* CatsApp */ = {
 			isa = PBXGroup;
 			children = (
-				38467117261BC80100D501AA /* Info.plist */,
-				38467109261BC80000D501AA /* AppDelegate.swift */,
-				3846710D261BC80000D501AA /* ContentView.swift */,
-				3846710B261BC80000D501AA /* SceneDelegate.swift */,
+				386DE7A52656E38E00F452EE /* App */,
+				386DE79A2656CCF300F452EE /* Breeds */,
+				386DE7A62656E39A00F452EE /* Combine */,
 				3846710F261BC80100D501AA /* Assets.xcassets */,
 				38467114261BC80100D501AA /* LaunchScreen.storyboard */,
 				38467111261BC80100D501AA /* Preview Content */,
+				38467117261BC80100D501AA /* Info.plist */,
 			);
 			path = CatsApp;
 			sourceTree = "<group>";
@@ -102,9 +131,62 @@
 			isa = PBXGroup;
 			children = (
 				38467122261BC80100D501AA /* Info.plist */,
-				38467120261BC80100D501AA /* CatsAppTests.swift */,
+				386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */,
+				386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */,
 			);
 			path = CatsAppTests;
+			sourceTree = "<group>";
+		};
+		386DE7952656C60400F452EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				386DE7962656C60400F452EE /* CatsFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		386DE79A2656CCF300F452EE /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				386DE7A82656E3CF00F452EE /* Store */,
+				386DE7A72656E3BD00F452EE /* UI */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		386DE7A52656E38E00F452EE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38467109261BC80000D501AA /* AppDelegate.swift */,
+				3846710B261BC80000D501AA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		386DE7A62656E39A00F452EE /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		386DE7A72656E3BD00F452EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3846710D261BC80000D501AA /* BreedsView.swift */,
+				386DE7A32656E31900F452EE /* SpinnerView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		386DE7A82656E3CF00F452EE /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				386DE79B2656CCFD00F452EE /* BreedsStore.swift */,
+				386DE7A12656E12B00F452EE /* PresentableBreed.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +199,7 @@
 				38467102261BC80000D501AA /* Sources */,
 				38467103261BC80000D501AA /* Frameworks */,
 				38467104261BC80000D501AA /* Resources */,
+				386DE7992656C60400F452EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386DE7A22656E12B00F452EE /* PresentableBreed.swift in Sources */,
 				3846710A261BC80000D501AA /* AppDelegate.swift in Sources */,
 				3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */,
-				3846710E261BC80000D501AA /* ContentView.swift in Sources */,
+				386DE79C2656CCFD00F452EE /* BreedsStore.swift in Sources */,
+				386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */,
+				3846710E261BC80000D501AA /* BreedsView.swift in Sources */,
+				386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38467121261BC80100D501AA /* CatsAppTests.swift in Sources */,
+				386DE79E2656D8A800F452EE /* BreedsStoreTests.swift in Sources */,
+				386DE7AA2656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
