@@ -17,6 +17,14 @@ class CatsBreedsMapperTests: XCTestCase {
         }
     }
 
+    func test_map_throwsErrorOn200HTTPResponseWithInvalidJSON() {
+        let json = Data("invalid json".utf8)
+
+        XCTAssertThrowsError(
+            try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        )
+    }
+
     // MARK: Helpers
 
     func makeItemsJSON(_ items: [[String: Any]]) -> Data {
