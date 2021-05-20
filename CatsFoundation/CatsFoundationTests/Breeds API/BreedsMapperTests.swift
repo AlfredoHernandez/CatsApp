@@ -5,14 +5,14 @@
 import CatsFoundation
 import XCTest
 
-class CatsBreedsMapperTests: XCTestCase {
+class BreedsMapperTests: XCTestCase {
     func test_map_throwsErrorOnNon200HTTPResponse() throws {
         let json = makeItemsJSON([])
         let samples = [199, 300, 400, 500]
 
         try samples.forEach { code in
             XCTAssertThrowsError(
-                try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: code))
+                try BreedsMapper.map(json, from: HTTPURLResponse(statusCode: code))
             )
         }
     }
@@ -21,14 +21,14 @@ class CatsBreedsMapperTests: XCTestCase {
         let json = Data("invalid json".utf8)
 
         XCTAssertThrowsError(
-            try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+            try BreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
         )
     }
 
     func test_map_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
         let json = makeItemsJSON([])
 
-        let breeds = try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        let breeds = try BreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
         XCTAssertEqual(breeds, [])
     }
 
@@ -37,7 +37,7 @@ class CatsBreedsMapperTests: XCTestCase {
         let breed1 = makeBreed(id: "another-id", name: "another name")
         let json = makeItemsJSON([breed0.json, breed1.json])
 
-        let breeds = try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        let breeds = try BreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
         XCTAssertEqual(breeds, [breed0.model, breed1.model])
     }
 

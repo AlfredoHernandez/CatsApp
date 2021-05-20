@@ -4,7 +4,7 @@
 
 import Foundation
 
-public class CatsBreedsMapper {
+public class BreedsMapper {
     private struct RemoteBreed: Decodable {
         let id: String
         let name: String
