@@ -25,11 +25,17 @@ class CatsBreedsMapperTests: XCTestCase {
         )
     }
 
+    func test_map_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
+        let json = makeItemsJSON([])
+
+        let breeds = try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        XCTAssertEqual(breeds, [])
+    }
+
     // MARK: Helpers
 
-    func makeItemsJSON(_ items: [[String: Any]]) -> Data {
-        let json = [items]
-        return try! JSONSerialization.data(withJSONObject: json)
+    func makeItemsJSON(_ json: [[String: Any]]) -> Data {
+        try! JSONSerialization.data(withJSONObject: json)
     }
 }
 
