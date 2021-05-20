@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Breed: Decodable, Equatable {
+struct Breed: Equatable {
     let id: String
     let name: String
 }

@@ -5,6 +5,11 @@
 import Foundation
 
 class CatsBreedsMapper {
+    private struct RemoteBreed: Decodable {
+        let id: String
+        let name: String
+    }
+
     enum Error: Swift.Error {
         case invalidData
     }
@@ -13,6 +18,6 @@ class CatsBreedsMapper {
         if !(200 ... 299).contains(response.statusCode) {
             throw Error.invalidData
         }
-        return try data.decode(type: [Breed].self)
+        return try data.decode(type: [RemoteBreed].self).map { Breed(id: $0.id, name: $0.name) }
     }
 }
