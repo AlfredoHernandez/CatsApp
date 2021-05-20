@@ -32,10 +32,25 @@ class CatsBreedsMapperTests: XCTestCase {
         XCTAssertEqual(breeds, [])
     }
 
+    func test_map_deliversItemsOn200HTTPResponseWithJSONItems() throws {
+        let breed0 = makeBreed(id: "an-id", name: "a name")
+        let breed1 = makeBreed(id: "another-id", name: "another name")
+        let json = makeItemsJSON([breed0.json, breed1.json])
+
+        let breeds = try CatsBreedsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        XCTAssertEqual(breeds, [breed0.model, breed1.model])
+    }
+
     // MARK: Helpers
 
     func makeItemsJSON(_ json: [[String: Any]]) -> Data {
         try! JSONSerialization.data(withJSONObject: json)
+    }
+
+    private func makeBreed(id: String, name: String) -> (json: [String: Any], model: Breed) {
+        let json = ["id": id, "name": name]
+        let model = Breed(id: id, name: name)
+        return (json, model)
     }
 }
 
