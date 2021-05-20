@@ -6,7 +6,7 @@ import CatsFoundation
 import Combine
 import SwiftUI
 
-struct ContentView: View {
+struct BreedsView: View {
     @ObservedObject var store: BreedStore
 
     var body: some View {
@@ -27,7 +27,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
+        BreedsView(
             store: BreedStore(
                 loader: CurrentValueSubject(
                     [

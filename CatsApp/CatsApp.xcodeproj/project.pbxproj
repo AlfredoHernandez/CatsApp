@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3846710A261BC80000D501AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38467109261BC80000D501AA /* AppDelegate.swift */; };
 		3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710B261BC80000D501AA /* SceneDelegate.swift */; };
-		3846710E261BC80000D501AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710D261BC80000D501AA /* ContentView.swift */; };
+		3846710E261BC80000D501AA /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710D261BC80000D501AA /* BreedsView.swift */; };
 		38467110261BC80100D501AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3846710F261BC80100D501AA /* Assets.xcassets */; };
 		38467113261BC80100D501AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38467112261BC80100D501AA /* Preview Assets.xcassets */; };
 		38467116261BC80100D501AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38467114261BC80100D501AA /* LaunchScreen.storyboard */; };
@@ -51,7 +51,7 @@
 		38467106261BC80000D501AA /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38467109261BC80000D501AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3846710B261BC80000D501AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3846710D261BC80000D501AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3846710D261BC80000D501AA /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
 		3846710F261BC80100D501AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38467112261BC80100D501AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38467115261BC80100D501AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		386DE7A72656E3BD00F452EE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3846710D261BC80000D501AA /* ContentView.swift */,
+				3846710D261BC80000D501AA /* BreedsView.swift */,
 				386DE7A32656E31900F452EE /* SpinnerView.swift */,
 			);
 			path = UI;
@@ -295,7 +295,7 @@
 				3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */,
 				386DE79C2656CCFD00F452EE /* BreedsStore.swift in Sources */,
 				386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */,
-				3846710E261BC80000D501AA /* ContentView.swift in Sources */,
+				3846710E261BC80000D501AA /* BreedsView.swift in Sources */,
 				386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .eraseToAnyPublisher()
         )
 
-        let contentView = ContentView(store: viewModel)
+        let contentView = BreedsView(store: viewModel)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
