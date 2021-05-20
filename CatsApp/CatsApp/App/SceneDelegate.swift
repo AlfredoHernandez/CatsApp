@@ -10,8 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
-        var request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/breeds")!)
-        request.addValue("ed8f6c95-57c0-4343-be27-b49a6db7ef66", forHTTPHeaderField: "x-api-key")
+        let request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/breeds")!)
 
         let viewModel = BreedStore(
             loader: URLSession.shared
