@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383CD4952655DA5D00406D1B /* BreedsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CD4942655DA5D00406D1B /* BreedsMapper.swift */; };
+		383CD49A2655E3F500406D1B /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CD4992655E3F500406D1B /* Breed.swift */; };
+		383CD49D2655E45300406D1B /* Data+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CD49C2655E45300406D1B /* Data+JSONDecoder.swift */; };
 		384670EB261BC7C700D501AA /* CatsFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384670E1261BC7C700D501AA /* CatsFoundation.framework */; };
-		384670F0261BC7C700D501AA /* CatsFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384670EF261BC7C700D501AA /* CatsFoundationTests.swift */; };
-		384670F2261BC7C700D501AA /* CatsFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 384670E4261BC7C700D501AA /* CatsFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		384670F0261BC7C700D501AA /* BreedsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384670EF261BC7C700D501AA /* BreedsMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,11 +25,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383CD4942655DA5D00406D1B /* BreedsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsMapper.swift; sourceTree = "<group>"; };
+		383CD4992655E3F500406D1B /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		383CD49C2655E45300406D1B /* Data+JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONDecoder.swift"; sourceTree = "<group>"; };
 		384670E1261BC7C700D501AA /* CatsFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatsFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		384670E4261BC7C700D501AA /* CatsFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatsFoundation.h; sourceTree = "<group>"; };
 		384670E5261BC7C700D501AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		384670EA261BC7C700D501AA /* CatsFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		384670EF261BC7C700D501AA /* CatsFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsFoundationTests.swift; sourceTree = "<group>"; };
+		384670EF261BC7C700D501AA /* BreedsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsMapperTests.swift; sourceTree = "<group>"; };
 		384670F1261BC7C700D501AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +54,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		383CD4962655E3BA00406D1B /* Breeds API */ = {
+			isa = PBXGroup;
+			children = (
+				383CD4942655DA5D00406D1B /* BreedsMapper.swift */,
+			);
+			path = "Breeds API";
+			sourceTree = "<group>";
+		};
+		383CD4972655E3D100406D1B /* Breeds API */ = {
+			isa = PBXGroup;
+			children = (
+				384670EF261BC7C700D501AA /* BreedsMapperTests.swift */,
+			);
+			path = "Breeds API";
+			sourceTree = "<group>";
+		};
+		383CD4982655E3E700406D1B /* Breeds Feature */ = {
+			isa = PBXGroup;
+			children = (
+				383CD4992655E3F500406D1B /* Breed.swift */,
+			);
+			path = "Breeds Feature";
+			sourceTree = "<group>";
+		};
+		383CD49B2655E43E00406D1B /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				383CD49C2655E45300406D1B /* Data+JSONDecoder.swift */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
 		384670D7261BC7C700D501AA = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +107,9 @@
 		384670E3261BC7C700D501AA /* CatsFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				384670E4261BC7C700D501AA /* CatsFoundation.h */,
+				383CD49B2655E43E00406D1B /* Shared API */,
+				383CD4982655E3E700406D1B /* Breeds Feature */,
+				383CD4962655E3BA00406D1B /* Breeds API */,
 				384670E5261BC7C700D501AA /* Info.plist */,
 			);
 			path = CatsFoundation;
@@ -80,7 +118,7 @@
 		384670EE261BC7C700D501AA /* CatsFoundationTests */ = {
 			isa = PBXGroup;
 			children = (
-				384670EF261BC7C700D501AA /* CatsFoundationTests.swift */,
+				383CD4972655E3D100406D1B /* Breeds API */,
 				384670F1261BC7C700D501AA /* Info.plist */,
 			);
 			path = CatsFoundationTests;
@@ -93,7 +131,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384670F2261BC7C700D501AA /* CatsFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +184,7 @@
 				TargetAttributes = {
 					384670E0261BC7C700D501AA = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 					};
 					384670E9261BC7C700D501AA = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383CD49A2655E3F500406D1B /* Breed.swift in Sources */,
+				383CD49D2655E45300406D1B /* Data+JSONDecoder.swift in Sources */,
+				383CD4952655DA5D00406D1B /* BreedsMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384670F0261BC7C700D501AA /* CatsFoundationTests.swift in Sources */,
+				384670F0261BC7C700D501AA /* BreedsMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +382,7 @@
 		384670F6261BC7C700D501AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HS399QXLRD;
@@ -361,6 +403,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
@@ -369,6 +412,7 @@
 		384670F7261BC7C700D501AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HS399QXLRD;
@@ -397,6 +441,7 @@
 		384670F9261BC7C700D501AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				INFOPLIST_FILE = CatsFoundationTests/Info.plist;
@@ -417,6 +462,7 @@
 		384670FA261BC7C700D501AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				INFOPLIST_FILE = CatsFoundationTests/Info.plist;
