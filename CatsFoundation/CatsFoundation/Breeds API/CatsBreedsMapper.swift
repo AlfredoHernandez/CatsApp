@@ -4,11 +4,6 @@
 
 import Foundation
 
-struct Breed: Decodable, Equatable {
-    let id: String
-    let name: String
-}
-
 class CatsBreedsMapper {
     enum Error: Swift.Error {
         case invalidData
@@ -19,11 +14,5 @@ class CatsBreedsMapper {
             throw Error.invalidData
         }
         return try data.decode(type: [Breed].self)
-    }
-}
-
-public extension Data {
-    func decode<Item>(type _: Item.Type) throws -> Item where Item: Decodable {
-        try JSONDecoder().decode(Item.self, from: self)
     }
 }
