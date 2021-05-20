@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewModel = BreedStore(
             loader: URLSession.shared
                 .dataTaskPublisher(for: request)
-                .tryMap { $0 }
                 .tryMap { try BreedsMapper.map($0, from: $1 as! HTTPURLResponse) }
                 .subscribe(on: DispatchQueue.global())
                 .eraseToAnyPublisher()
