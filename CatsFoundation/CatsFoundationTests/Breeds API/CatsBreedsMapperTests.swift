@@ -2,7 +2,7 @@
 //  Copyright © 2021 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
-@testable import CatsFoundation
+import CatsFoundation
 import XCTest
 
 class CatsBreedsMapperTests: XCTestCase {

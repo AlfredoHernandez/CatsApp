@@ -4,7 +4,7 @@
 
 import Foundation
 
-class CatsBreedsMapper {
+public class CatsBreedsMapper {
     private struct RemoteBreed: Decodable {
         let id: String
         let name: String
@@ -14,7 +14,7 @@ class CatsBreedsMapper {
         case invalidData
     }
 
-    static func map(_ data: Data, from response: HTTPURLResponse) throws -> [Breed] {
+    public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [Breed] {
         if !(200 ... 299).contains(response.statusCode) {
             throw Error.invalidData
         }
