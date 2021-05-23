@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .eraseToAnyPublisher()
         )
 
-        let contentView = BreedsView(store: store)
+        let breedsView = BreedsView(store: store)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: breedsView)
             self.window = window
             window.makeKeyAndVisible()
         }
