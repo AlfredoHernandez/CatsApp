@@ -7,4 +7,5 @@ import Foundation
 struct PresentableBreed: Identifiable {
     let id = UUID()
     let name: String
+    let url: URL?
 }

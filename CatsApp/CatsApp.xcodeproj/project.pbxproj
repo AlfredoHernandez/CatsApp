@@ -132,7 +132,7 @@
 			children = (
 				38467122261BC80100D501AA /* Info.plist */,
 				386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */,
-				386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */,
+				38F044BB265ABEE800F198F8 /* Helpers */,
 			);
 			path = CatsAppTests;
 			sourceTree = "<group>";
@@ -187,6 +187,14 @@
 				386DE7A12656E12B00F452EE /* PresentableBreed.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		38F044BB265ABEE800F198F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

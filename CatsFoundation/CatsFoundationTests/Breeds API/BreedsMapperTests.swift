@@ -113,13 +113,3 @@ class BreedsMapperTests: XCTestCase {
         return (json, model)
     }
 }
-
-func anyURL() -> URL {
-    URL(string: "http://any-url.com")!
-}
-
-extension HTTPURLResponse {
-    convenience init(statusCode: Int) {
-        self.init(url: anyURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
-    }
-}
