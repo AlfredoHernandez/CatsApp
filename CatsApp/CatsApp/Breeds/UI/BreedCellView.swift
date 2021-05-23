@@ -34,11 +34,11 @@ struct BreedCellView: View {
 struct BreedCellView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            BreedCellView(breed: PresentableBreed(name: "Abyssinian", imageURL: nil))
+            BreedCellView(breed: PresentableBreed(name: "Abyssinian", imageURL: nil, selectionHandler: {}))
                 .previewLayout(.fixed(width: 350, height: 80))
             BreedCellView(breed: PresentableBreed(
                 name: "Abyssinian",
-                imageURL: URL(string: "https://i.pinimg.com/originals/4d/9b/06/4d9b06aa653b75d719e35086b9aa885c.jpg")!
+                imageURL: URL(string: "https://i.pinimg.com/originals/4d/9b/06/4d9b06aa653b75d719e35086b9aa885c.jpg")!, selectionHandler: {}
             ))
                 .preferredColorScheme(.dark)
                 .previewLayout(.fixed(width: 350, height: 80))

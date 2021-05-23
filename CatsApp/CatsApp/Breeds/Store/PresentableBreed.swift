@@ -8,8 +8,13 @@ struct PresentableBreed: Identifiable {
     let id = UUID()
     let name: String
     let imageURL: URL?
+    let selectionHandler: () -> Void
 
     var hasImageUrl: Bool {
         imageURL != nil
+    }
+
+    func select() {
+        selectionHandler()
     }
 }
