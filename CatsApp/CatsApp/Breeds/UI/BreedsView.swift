@@ -56,8 +56,7 @@ struct ContentView_Previews: PreviewProvider {
                             image: nil
                         ),
                     ]
-                ).eraseToAnyPublisher(),
-                onSelect: { _ in }
+                ).eraseToAnyPublisher()
             )
         )
     }

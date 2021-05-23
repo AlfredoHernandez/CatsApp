@@ -8,20 +8,13 @@ public struct PresentableBreed: Identifiable {
     public let id = UUID()
     public let name: String
     public let imageURL: URL?
-    public let selectionHandler: () -> Void
-    
-    public init(name: String, imageURL: URL?, selectionHandler: @escaping () -> Void) {
+
+    public init(name: String, imageURL: URL?) {
         self.name = name
         self.imageURL = imageURL
-        self.selectionHandler = selectionHandler
     }
-    
 
     public var hasImageUrl: Bool {
         imageURL != nil
-    }
-
-    public func select() {
-        selectionHandler()
     }
 }

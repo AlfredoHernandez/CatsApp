@@ -52,39 +52,11 @@ final class BreedsStoreTests: XCTestCase {
         XCTAssertFalse(sut.isLoading)
     }
 
-    func test_didSelectBreed_handlesSelection() {
-        var selectedBreeds = [Breed]()
-
-        let (sut, loader) = makeSUT(selection: { breed in
-            selectedBreeds.append(breed)
-        })
-
-        let breed0 = Breed(
-            id: "any-id",
-            name: "any name",
-            origin: "origin 0",
-            description: "description 0",
-            temperament: "temperament 0",
-            lifeSpan: "lifeSpan 0",
-            adaptability: 0,
-            affectionLevel: 1,
-            childFriendly: 2,
-            dogFriendly: 3,
-            image: anyURL()
-        )
-
-        sut.fetchBreeds()
-        loader.complete(with: [breed0], at: 0)
-        sut.breeds.first?.select()
-
-        XCTAssertEqual(selectedBreeds, [breed0])
-    }
-
     // MARK: - Helpers
 
-    private func makeSUT(selection: @escaping (Breed) -> Void = { _ in }, file: StaticString = #filePath, line: UInt = #line) -> (BreedStore, BreedLoaderSpy) {
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (BreedStore, BreedLoaderSpy) {
         let loader = BreedLoaderSpy()
-        let sut = BreedStore(loader: loader.publisher(), onSelect: selection)
+        let sut = BreedStore(loader: loader.publisher())
         trackForMemoryLeaks(loader, file: file, line: line)
         return (sut, loader)
     }

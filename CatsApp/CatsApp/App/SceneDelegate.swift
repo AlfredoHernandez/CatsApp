@@ -17,8 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .dataTaskPublisher(for: request)
                 .tryMap { try BreedsMapper.map($0, from: $1 as! HTTPURLResponse) }
                 .subscribe(on: DispatchQueue.global())
-                .eraseToAnyPublisher(),
-            onSelect: { _ in }
+                .eraseToAnyPublisher()
         )
 
         let contentView = BreedsView(store: store)

@@ -9,15 +9,13 @@ import Foundation
 class BreedStore: ObservableObject {
     private var cancellable: Cancellable?
     private let loader: AnyPublisher<[Breed], Error>
-    private let onSelect: (Breed) -> Void
 
     @Published var breeds: [PresentableBreed] = []
     @Published var isLoading: Bool = false
     var title: String { "Breeds" }
 
-    init(loader: AnyPublisher<[Breed], Error>, onSelect: @escaping (Breed) -> Void) {
+    init(loader: AnyPublisher<[Breed], Error>) {
         self.loader = loader
-        self.onSelect = onSelect
     }
 
     func fetchBreeds() {
@@ -36,10 +34,7 @@ class BreedStore: ObservableObject {
         self.breeds = breeds.map { breed in
             PresentableBreed(
                 name: breed.name,
-                imageURL: breed.image,
-                selectionHandler: { [weak self] in
-                    self?.onSelect(breed)
-                }
+                imageURL: breed.image
             )
         }
         isLoading = false
