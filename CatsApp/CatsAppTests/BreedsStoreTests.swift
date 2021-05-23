@@ -39,7 +39,7 @@ final class BreedsStoreTests: XCTestCase {
         XCTAssertFalse(sut.isLoading)
         XCTAssertEqual(sut.breeds.count, 1)
         XCTAssertEqual(sut.breeds.first?.name, breed0.name)
-        XCTAssertEqual(sut.breeds.first?.url, breed0.image)
+        XCTAssertEqual(sut.breeds.first?.imageURL, breed0.image)
     }
 
     func test_fetchBreedsWithError_displaysErrorAndStopsLoading() {

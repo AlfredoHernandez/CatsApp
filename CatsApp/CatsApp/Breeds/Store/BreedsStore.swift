@@ -31,7 +31,7 @@ class BreedStore: ObservableObject {
     }
 
     private func onReceive(breeds: [Breed]) {
-        self.breeds = breeds.map { PresentableBreed(name: $0.name, url: $0.image) }
+        self.breeds = breeds.map { PresentableBreed(name: $0.name, imageURL: $0.image) }
         isLoading = false
     }
 }
