@@ -8,4 +8,8 @@ struct PresentableBreed: Identifiable {
     let id = UUID()
     let name: String
     let imageURL: URL?
+
+    var hasImageUrl: Bool {
+        imageURL != nil
+    }
 }

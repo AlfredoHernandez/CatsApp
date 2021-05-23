@@ -39,6 +39,7 @@ final class BreedsStoreTests: XCTestCase {
         XCTAssertFalse(sut.isLoading)
         XCTAssertEqual(sut.breeds.count, 1)
         XCTAssertEqual(sut.breeds.first?.name, breed0.name)
+        XCTAssertEqual(sut.breeds.first?.hasImageUrl, true)
         XCTAssertEqual(sut.breeds.first?.imageURL, breed0.image)
     }
 

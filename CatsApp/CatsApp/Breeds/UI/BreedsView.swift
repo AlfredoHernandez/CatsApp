@@ -12,10 +12,8 @@ struct BreedsView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                List {
-                    ForEach(store.breeds) { breed in
-                        Text(breed.name)
-                    }
+                List(store.breeds) { breed in
+                    BreedCellView(breed: breed)
                 }
                 .navigationTitle(Text(store.title))
             }

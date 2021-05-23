@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         let request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/breeds")!)
 
-        let viewModel = BreedStore(
+        let store = BreedStore(
             loader: URLSession.shared
                 .dataTaskPublisher(for: request)
                 .tryMap { try BreedsMapper.map($0, from: $1 as! HTTPURLResponse) }
@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .eraseToAnyPublisher()
         )
 
-        let contentView = BreedsView(store: viewModel)
+        let contentView = BreedsView(store: store)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
