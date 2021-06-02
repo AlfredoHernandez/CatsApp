@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,9 +18,12 @@
 		386DE79C2656CCFD00F452EE /* BreedsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE79B2656CCFD00F452EE /* BreedsStore.swift */; };
 		386DE79E2656D8A800F452EE /* BreedsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */; };
 		386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */; };
-		386DE7A22656E12B00F452EE /* PresentableBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A12656E12B00F452EE /* PresentableBreed.swift */; };
 		386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A32656E31900F452EE /* SpinnerView.swift */; };
 		386DE7AA2656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */; };
+		38F044C1265AC0DE00F198F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 38F044C0265AC0DE00F198F8 /* Kingfisher */; };
+		38F044C3265AD35B00F198F8 /* BreedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F044C2265AD35B00F198F8 /* BreedCellView.swift */; };
+		38F044C8265B04AE00F198F8 /* BreedsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */; };
+		C95A89E0547AA89A1343E54A /* Combine+HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95A83F4FBCA043E3B6AE598 /* Combine+HTTPURLResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +65,11 @@
 		386DE79B2656CCFD00F452EE /* BreedsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsStore.swift; sourceTree = "<group>"; };
 		386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsStoreTests.swift; sourceTree = "<group>"; };
 		386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+ImmediateWhenOnMainQueueScheduler.swift"; sourceTree = "<group>"; };
-		386DE7A12656E12B00F452EE /* PresentableBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableBreed.swift; sourceTree = "<group>"; };
 		386DE7A32656E31900F452EE /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
+		38F044C2265AD35B00F198F8 /* BreedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCellView.swift; sourceTree = "<group>"; };
+		38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUIComposer.swift; sourceTree = "<group>"; };
+		C95A83F4FBCA043E3B6AE598 /* Combine+HTTPURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+HTTPURLResponse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F044C1265AC0DE00F198F8 /* Kingfisher in Frameworks */,
 				386DE7972656C60400F452EE /* CatsFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,7 +138,7 @@
 			children = (
 				38467122261BC80100D501AA /* Info.plist */,
 				386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */,
-				386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */,
+				38F044BB265ABEE800F198F8 /* Helpers */,
 			);
 			path = CatsAppTests;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 		386DE79A2656CCF300F452EE /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */,
 				386DE7A82656E3CF00F452EE /* Store */,
 				386DE7A72656E3BD00F452EE /* UI */,
 			);
@@ -167,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */,
+				C95A83F4FBCA043E3B6AE598 /* Combine+HTTPURLResponse.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			children = (
 				3846710D261BC80000D501AA /* BreedsView.swift */,
 				386DE7A32656E31900F452EE /* SpinnerView.swift */,
+				38F044C2265AD35B00F198F8 /* BreedCellView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -184,9 +193,16 @@
 			isa = PBXGroup;
 			children = (
 				386DE79B2656CCFD00F452EE /* BreedsStore.swift */,
-				386DE7A12656E12B00F452EE /* PresentableBreed.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		38F044BB265ABEE800F198F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +222,9 @@
 			dependencies = (
 			);
 			name = CatsApp;
+			packageProductDependencies = (
+				38F044C0265AC0DE00F198F8 /* Kingfisher */,
+			);
 			productName = CatsApp;
 			productReference = 38467106261BC80000D501AA /* CatsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +274,9 @@
 				Base,
 			);
 			mainGroup = 384670FD261BC80000D501AA;
+			packageReferences = (
+				38F044BF265AC0DE00F198F8 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+			);
 			productRefGroup = 38467107261BC80000D501AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,13 +312,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				386DE7A22656E12B00F452EE /* PresentableBreed.swift in Sources */,
 				3846710A261BC80000D501AA /* AppDelegate.swift in Sources */,
 				3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */,
+				38F044C3265AD35B00F198F8 /* BreedCellView.swift in Sources */,
 				386DE79C2656CCFD00F452EE /* BreedsStore.swift in Sources */,
+				38F044C8265B04AE00F198F8 /* BreedsUIComposer.swift in Sources */,
 				386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */,
 				3846710E261BC80000D501AA /* BreedsView.swift in Sources */,
 				386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */,
+				C95A89E0547AA89A1343E54A /* Combine+HTTPURLResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +590,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38F044BF265AC0DE00F198F8 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38F044C0265AC0DE00F198F8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38F044BF265AC0DE00F198F8 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 384670FE261BC80000D501AA /* Project object */;
 }

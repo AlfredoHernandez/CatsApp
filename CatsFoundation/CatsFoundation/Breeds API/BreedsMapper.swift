@@ -8,6 +8,35 @@ public class BreedsMapper {
     private struct RemoteBreed: Decodable {
         let id: String
         let name: String
+        let origin: String
+        let description: String
+        let temperament: String
+        let life_span: String
+        let adaptability: Int
+        let affection_level: Int
+        let child_friendly: Int
+        let dog_friendly: Int
+        let image: RemoteImage?
+
+        func toModel() -> Breed {
+            Breed(
+                id: id,
+                name: name,
+                origin: origin,
+                description: description,
+                temperament: temperament,
+                lifeSpan: life_span,
+                adaptability: adaptability,
+                affectionLevel: affection_level,
+                childFriendly: child_friendly,
+                dogFriendly: dog_friendly,
+                image: image?.url
+            )
+        }
+    }
+
+    private struct RemoteImage: Decodable {
+        let url: URL?
     }
 
     enum Error: Swift.Error {
@@ -18,6 +47,8 @@ public class BreedsMapper {
         if !(200 ... 299).contains(response.statusCode) {
             throw Error.invalidData
         }
-        return try data.decode(type: [RemoteBreed].self).map { Breed(id: $0.id, name: $0.name) }
+        return try data
+            .decode(type: [RemoteBreed].self)
+            .map { $0.toModel() }
     }
 }

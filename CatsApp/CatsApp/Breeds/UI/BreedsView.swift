@@ -12,10 +12,8 @@ struct BreedsView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                List {
-                    ForEach(store.breeds) { breed in
-                        Text(breed.name)
-                    }
+                List(store.breeds) { breed in
+                    BreedCellView(breed: breed)
                 }
                 .navigationTitle(Text(store.title))
             }
@@ -31,8 +29,32 @@ struct ContentView_Previews: PreviewProvider {
             store: BreedStore(
                 loader: CurrentValueSubject(
                     [
-                        Breed(id: "abys", name: "Abyssinian"),
-                        Breed(id: "aege", name: "Aegean"),
+                        Breed(
+                            id: "abys",
+                            name: "Abyssinian",
+                            origin: "Egypt",
+                            description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+                            temperament: "Active, Energetic, Independent, Intelligent, Gentle",
+                            lifeSpan: "14 - 15",
+                            adaptability: 3,
+                            affectionLevel: 5,
+                            childFriendly: 4,
+                            dogFriendly: 3,
+                            image: nil
+                        ),
+                        Breed(
+                            id: "abys",
+                            name: "Abyssinian",
+                            origin: "Egypt",
+                            description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+                            temperament: "Active, Energetic, Independent, Intelligent, Gentle",
+                            lifeSpan: "14 - 15",
+                            adaptability: 3,
+                            affectionLevel: 5,
+                            childFriendly: 4,
+                            dogFriendly: 3,
+                            image: nil
+                        ),
                     ]
                 ).eraseToAnyPublisher()
             )
