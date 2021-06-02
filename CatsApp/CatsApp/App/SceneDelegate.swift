@@ -26,9 +26,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func breedsLoader() -> AnyPublisher<[Breed], Error> {
         let request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/breeds")!)
         return URLSession.shared
-            .dataTaskPublisher(for: request)
-            .tryMap { try BreedsMapper.map($0, from: $1 as! HTTPURLResponse) }
+            .httpDataTaskPublisher(for: request, mapper: BreedsMapper.map)
             .subscribe(on: DispatchQueue.global())
             .eraseToAnyPublisher()
+    }
+}
+
+extension URLSession {
+    func httpDataTaskPublisher<T>(for request: URLRequest, mapper: @escaping (Data, HTTPURLResponse) throws -> T) -> AnyPublisher<T, Error> {
+        dataTaskPublisher(for: request)
+                .tryMap { ($0, $1 as! HTTPURLResponse) }
+                .tryMap(mapper)
+                .eraseToAnyPublisher()
     }
 }
