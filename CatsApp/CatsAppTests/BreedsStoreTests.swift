@@ -19,7 +19,19 @@ final class BreedsStoreTests: XCTestCase {
 
     func test_fetchBreeds_completesSuccessfullyAndStopsLoading() {
         let (sut, loader) = makeSUT()
-        let breed0 = Breed(id: "any", name: "any")
+        let breed0 = Breed(
+            id: "any-id",
+            name: "any name",
+            origin: "origin 0",
+            description: "description 0",
+            temperament: "temperament 0",
+            lifeSpan: "lifeSpan 0",
+            adaptability: 0,
+            affectionLevel: 1,
+            childFriendly: 2,
+            dogFriendly: 3,
+            image: anyURL()
+        )
 
         sut.fetchBreeds()
         loader.complete(with: [breed0], at: 0)
@@ -27,6 +39,8 @@ final class BreedsStoreTests: XCTestCase {
         XCTAssertFalse(sut.isLoading)
         XCTAssertEqual(sut.breeds.count, 1)
         XCTAssertEqual(sut.breeds.first?.name, breed0.name)
+        XCTAssertEqual(sut.breeds.first?.hasImageUrl, true)
+        XCTAssertEqual(sut.breeds.first?.imageURL, breed0.image)
     }
 
     func test_fetchBreedsWithError_displaysErrorAndStopsLoading() {
@@ -67,5 +81,9 @@ final class BreedsStoreTests: XCTestCase {
 
     private func anyError() -> NSError {
         NSError(domain: "testing", code: 0, userInfo: nil)
+    }
+
+    func anyURL() -> URL {
+        URL(string: "http://any-url.com")!
     }
 }
