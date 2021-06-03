@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-03T00:37:49.496Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15" etag="xnPJ_ruMbYpa8TPMhih-" version="14.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-03T00:38:25.740Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15" etag="Yfj5NNuStQHBXYa31ZYh" version="14.7.4" type="github">
   <diagram id="UjNKp0Ct7n-lzt2zG22C" name="Page-1">
     <mxGraphModel dx="1928" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -59,7 +59,7 @@
             <mxPoint x="40" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G4XLr2i-ibFLbOx_ARMf-13" value="&lt;font color=&quot;#007fff&quot; face=&quot;Verdana&quot;&gt;&lt;span&gt;KingFisher&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+        <mxCell id="G4XLr2i-ibFLbOx_ARMf-13" value="&lt;font color=&quot;#007fff&quot; face=&quot;Verdana&quot;&gt;&lt;span&gt;KingFisher&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=3;dashed=1;strokeColor=#007FFF;" vertex="1" parent="1">
           <mxGeometry x="-150" y="160" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="G4XLr2i-ibFLbOx_ARMf-15" value="&lt;font color=&quot;#007fff&quot;&gt;&lt;b&gt;SwiftUI&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="1">
@@ -91,7 +91,7 @@
         <mxCell id="G4XLr2i-ibFLbOx_ARMf-20" value="&lt;font face=&quot;Verdana&quot; color=&quot;#7f00ff&quot;&gt;BreedsUIComposer&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=3;strokeColor=#7F00FF;" vertex="1" parent="1">
           <mxGeometry x="300" y="470" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="G4XLr2i-ibFLbOx_ARMf-23" value="&lt;b&gt;External Libs&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="1">
+        <mxCell id="G4XLr2i-ibFLbOx_ARMf-23" value="&lt;b&gt;&lt;font color=&quot;#007fff&quot;&gt;External Libs&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="-92.5" y="100" width="35" height="20" as="geometry" />
         </mxCell>
       </root>
