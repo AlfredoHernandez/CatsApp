@@ -96,6 +96,17 @@
                ReferencedContainer = "container:CatsApp/CatsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3897449E267135F300C2F756"
+               BuildableName = "CatsAppUITests.xctest"
+               BlueprintName = "CatsAppUITests"
+               ReferencedContainer = "container:CatsApp/CatsApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
