@@ -16,7 +16,7 @@ final class CatsAcceptanceTests: XCTestCase {
     // MARK: - Helpers
 
     private func launch() -> UIHostingController<BreedsView> {
-        let scene = SceneDelegate()
+        let scene = SceneDelegate(scheduler: .immediateOnMainQueue)
         let window = UIWindow()
         scene.window = window
         scene.configureWindow()

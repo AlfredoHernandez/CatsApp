@@ -21,6 +21,7 @@
 		386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A32656E31900F452EE /* SpinnerView.swift */; };
 		386DE7AA2656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */; };
 		38974496267128EB00C2F756 /* CatsAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38974495267128EB00C2F756 /* CatsAcceptanceTests.swift */; };
+		3897449826712FC700C2F756 /* AnyDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897449726712FC700C2F756 /* AnyDispatchQueueScheduler.swift */; };
 		38F044C1265AC0DE00F198F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 38F044C0265AC0DE00F198F8 /* Kingfisher */; };
 		38F044C3265AD35B00F198F8 /* BreedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F044C2265AD35B00F198F8 /* BreedCellView.swift */; };
 		38F044C8265B04AE00F198F8 /* BreedsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */; };
@@ -69,6 +70,7 @@
 		386DE7A32656E31900F452EE /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
 		38974495267128EB00C2F756 /* CatsAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAcceptanceTests.swift; sourceTree = "<group>"; };
+		3897449726712FC700C2F756 /* AnyDispatchQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDispatchQueueScheduler.swift; sourceTree = "<group>"; };
 		38F044C2265AD35B00F198F8 /* BreedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCellView.swift; sourceTree = "<group>"; };
 		38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUIComposer.swift; sourceTree = "<group>"; };
 		C95A83F4FBCA043E3B6AE598 /* Combine+HTTPURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+HTTPURLResponse.swift"; sourceTree = "<group>"; };
@@ -138,10 +140,10 @@
 		3846711F261BC80100D501AA /* CatsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				38467122261BC80100D501AA /* Info.plist */,
-				386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */,
 				38F044BB265ABEE800F198F8 /* Helpers */,
 				38974495267128EB00C2F756 /* CatsAcceptanceTests.swift */,
+				386DE79D2656D8A800F452EE /* BreedsStoreTests.swift */,
+				38467122261BC80100D501AA /* Info.plist */,
 			);
 			path = CatsAppTests;
 			sourceTree = "<group>";
@@ -178,6 +180,7 @@
 			children = (
 				386DE79F2656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift */,
 				C95A83F4FBCA043E3B6AE598 /* Combine+HTTPURLResponse.swift */,
+				3897449726712FC700C2F756 /* AnyDispatchQueueScheduler.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */,
 				3846710E261BC80000D501AA /* BreedsView.swift in Sources */,
 				386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */,
+				3897449826712FC700C2F756 /* AnyDispatchQueueScheduler.swift in Sources */,
 				C95A89E0547AA89A1343E54A /* Combine+HTTPURLResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
