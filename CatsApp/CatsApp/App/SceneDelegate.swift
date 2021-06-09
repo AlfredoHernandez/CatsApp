@@ -13,14 +13,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-
-            window.rootViewController = UIHostingController(
-                rootView: BreedsUIComposer.composeWith(loader: breedsLoader())
-            )
-
             self.window = window
-            window.makeKeyAndVisible()
+            configureWindow()
         }
+    }
+
+    func configureWindow() {
+        window?.rootViewController = UIHostingController(
+            rootView: BreedsUIComposer.composeWith(loader: breedsLoader())
+        )
+        window?.makeKeyAndVisible()
     }
 
     private func breedsLoader() -> AnyPublisher<[Breed], Error> {

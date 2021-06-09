@@ -15,6 +15,7 @@ struct BreedsView: View {
                 List(store.breeds) { breed in
                     BreedCellView(breed: breed)
                 }
+                .listStyle(PlainListStyle())
                 .navigationTitle(Text(store.title))
             }
             .onAppear(perform: store.fetchBreeds)
