@@ -4,10 +4,10 @@
 
 import Foundation
 
-struct BreedsPresenter {
-    let title = "Breeds"
+public struct BreedsPresenter {
+    public static let title = "Breeds"
 
-    func map(_ breed: Breed) -> PresentableBreed {
+    public static func map(_ breed: Breed) -> PresentableBreed {
         PresentableBreed(
             breedID: "id: \(breed.id)",
             name: breed.name,

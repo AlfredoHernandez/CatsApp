@@ -44,7 +44,8 @@ struct ContentView_Previews: PreviewProvider {
                             affectionLevel: 5,
                             childFriendly: 4,
                             dogFriendly: 3,
-                            image: nil
+                            image: nil,
+                            weight: "12 - 15"
                         ),
                         Breed(
                             id: "abys",
@@ -57,7 +58,8 @@ struct ContentView_Previews: PreviewProvider {
                             affectionLevel: 5,
                             childFriendly: 4,
                             dogFriendly: 3,
-                            image: nil
+                            image: nil,
+                            weight: "12 - 15"
                         ),
                     ]
                 ).eraseToAnyPublisher()

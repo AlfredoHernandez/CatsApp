@@ -30,7 +30,8 @@ final class BreedsStoreTests: XCTestCase {
             affectionLevel: 1,
             childFriendly: 2,
             dogFriendly: 3,
-            image: anyURL()
+            image: anyURL(),
+            weight: "12 - 15"
         )
 
         sut.fetchBreeds()

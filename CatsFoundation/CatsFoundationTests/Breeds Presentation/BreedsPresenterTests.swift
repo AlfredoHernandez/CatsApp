@@ -7,13 +7,10 @@ import XCTest
 
 final class BreedsPresenterTests: XCTestCase {
     func test_hasTitle() {
-        let sut = BreedsPresenter()
-
-        XCTAssertEqual(sut.title, "Breeds")
+        XCTAssertEqual(BreedsPresenter.title, "Breeds")
     }
 
     func test_map_createsPresentableBreed() {
-        let sut = BreedsPresenter()
         let breed = Breed(
             id: "any",
             name: "any",
@@ -29,7 +26,7 @@ final class BreedsPresenterTests: XCTestCase {
             weight: "3 - 5"
         )
 
-        let presentableBreed = sut.map(breed)
+        let presentableBreed = BreedsPresenter.map(breed)
 
         XCTAssertEqual(presentableBreed.breedID, "id: \(breed.id)")
         XCTAssertEqual(presentableBreed.name, breed.name)

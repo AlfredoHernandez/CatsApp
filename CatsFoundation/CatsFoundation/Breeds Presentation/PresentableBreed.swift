@@ -14,7 +14,7 @@ public struct PresentableBreed: Identifiable, Equatable {
     public let lifeSpan: String
     public let imageURL: URL?
 
-    internal init(breedID: String, name: String, description: String, temperament: String, origin: String, lifeSpan: String, imageURL: URL?) {
+    public init(breedID: String, name: String, description: String, temperament: String, origin: String, lifeSpan: String, imageURL: URL?) {
         self.breedID = breedID
         self.name = name
         self.description = description
