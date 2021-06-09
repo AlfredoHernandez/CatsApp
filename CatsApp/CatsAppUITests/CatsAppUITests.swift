@@ -19,4 +19,12 @@ class CatsAppUITests: XCTestCase {
         app.navigationBars.buttons["Breeds"].tap()
         XCTAssertEqual(app.cells.count, 67)
     }
+
+    func test_launchApp_doesNotDisplayBreedsWhenAppOffline() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-connectivity", "offline"]
+        app.launch()
+
+        XCTAssertEqual(app.cells.count, 0)
+    }
 }

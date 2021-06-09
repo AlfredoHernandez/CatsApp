@@ -22,9 +22,23 @@ class BreedsCoordinator {
             .eraseToAnyPublisher()
     }
 
+    private func makeAlwaysFailingLoader() -> AnyPublisher<[Breed], Error> {
+        Fail(error: NSError(domain: "Failable loader for testing", code: 0, userInfo: [:]))
+            .eraseToAnyPublisher()
+    }
+
     func start() -> UIViewController {
         UIHostingController(
-            rootView: BreedsUIComposer.composeWith(loader: breedsLoader())
+            rootView: BreedsUIComposer.composeWith(loader: selectLoader())
         )
+    }
+
+    private func selectLoader() -> AnyPublisher<[Breed], Error> {
+        #if DEBUG
+        if UserDefaults.standard.string(forKey: "connectivity") == "offline" {
+            return makeAlwaysFailingLoader()
+        }
+        #endif
+        return breedsLoader()
     }
 }
