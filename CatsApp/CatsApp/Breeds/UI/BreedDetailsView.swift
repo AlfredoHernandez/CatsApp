@@ -21,6 +21,7 @@ struct BreedDetailsView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 8.0))
                         .shadow(radius: 4)
                         .padding()
+                        .accessibility(identifier: "breed.cat.image")
                 } else {
                     Image("default-cat")
                         .resizable()
@@ -28,6 +29,7 @@ struct BreedDetailsView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 8.0))
                         .shadow(radius: 4)
                         .padding()
+                        .accessibility(identifier: "breed.cat.image")
                 }
                 Text(breed.name)
                     .font(.largeTitle)
