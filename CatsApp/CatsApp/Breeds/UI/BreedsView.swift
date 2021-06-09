@@ -8,13 +8,17 @@ import SwiftUI
 
 struct BreedsView: View {
     @ObservedObject var store: BreedStore
+    let onSelect: (PresentableBreed) -> AnyView
 
     var body: some View {
         ZStack {
             NavigationView {
                 List(store.breeds) { breed in
-                    BreedCellView(breed: breed)
+                    NavigationLink(destination: onSelect(breed), label: {
+                        BreedCellView(breed: breed)
+                    })
                 }
+                .listStyle(PlainListStyle())
                 .navigationTitle(Text(store.title))
             }
             .onAppear(perform: store.fetchBreeds)
@@ -57,7 +61,9 @@ struct ContentView_Previews: PreviewProvider {
                         ),
                     ]
                 ).eraseToAnyPublisher()
-            )
+            ), onSelect: { _ in
+                AnyView(EmptyView())
+            }
         )
     }
 }
