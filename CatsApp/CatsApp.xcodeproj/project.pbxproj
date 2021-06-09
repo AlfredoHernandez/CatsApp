@@ -22,6 +22,7 @@
 		386DE7AA2656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */; };
 		38974496267128EB00C2F756 /* CatsAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38974495267128EB00C2F756 /* CatsAcceptanceTests.swift */; };
 		3897449826712FC700C2F756 /* AnyDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897449726712FC700C2F756 /* AnyDispatchQueueScheduler.swift */; };
+		3897449A2671330E00C2F756 /* BreedsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389744992671330E00C2F756 /* BreedsCoordinator.swift */; };
 		38F044C1265AC0DE00F198F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 38F044C0265AC0DE00F198F8 /* Kingfisher */; };
 		38F044C3265AD35B00F198F8 /* BreedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F044C2265AD35B00F198F8 /* BreedCellView.swift */; };
 		38F044C8265B04AE00F198F8 /* BreedsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */; };
@@ -71,6 +72,7 @@
 		386DE7A92656E42300F452EE /* XCTestCase+MemoryLeaksTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaksTracking.swift"; sourceTree = "<group>"; };
 		38974495267128EB00C2F756 /* CatsAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAcceptanceTests.swift; sourceTree = "<group>"; };
 		3897449726712FC700C2F756 /* AnyDispatchQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDispatchQueueScheduler.swift; sourceTree = "<group>"; };
+		389744992671330E00C2F756 /* BreedsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCoordinator.swift; sourceTree = "<group>"; };
 		38F044C2265AD35B00F198F8 /* BreedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCellView.swift; sourceTree = "<group>"; };
 		38F044C7265B04AE00F198F8 /* BreedsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUIComposer.swift; sourceTree = "<group>"; };
 		C95A83F4FBCA043E3B6AE598 /* Combine+HTTPURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+HTTPURLResponse.swift"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				38467109261BC80000D501AA /* AppDelegate.swift */,
 				3846710B261BC80000D501AA /* SceneDelegate.swift */,
+				389744992671330E00C2F756 /* BreedsCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				386DE79C2656CCFD00F452EE /* BreedsStore.swift in Sources */,
 				38F044C8265B04AE00F198F8 /* BreedsUIComposer.swift in Sources */,
 				386DE7A02656E0E000F452EE /* Combine+ImmediateWhenOnMainQueueScheduler.swift in Sources */,
+				3897449A2671330E00C2F756 /* BreedsCoordinator.swift in Sources */,
 				3846710E261BC80000D501AA /* BreedsView.swift in Sources */,
 				386DE7A42656E31900F452EE /* SpinnerView.swift in Sources */,
 				3897449826712FC700C2F756 /* AnyDispatchQueueScheduler.swift in Sources */,

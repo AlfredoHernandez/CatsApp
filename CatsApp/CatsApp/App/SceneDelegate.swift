@@ -3,7 +3,6 @@
 //
 
 import CatsFoundation
-import Combine
 import SwiftUI
 import UIKit
 
@@ -30,17 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func configureWindow() {
-        window?.rootViewController = UIHostingController(
-            rootView: BreedsUIComposer.composeWith(loader: breedsLoader())
-        )
+        window?.rootViewController = BreedsCoordinator(scheduler: scheduler).start()
         window?.makeKeyAndVisible()
-    }
-
-    private func breedsLoader() -> AnyPublisher<[Breed], Error> {
-        let request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/breeds")!)
-        return URLSession.shared
-            .httpDataTaskPublisher(for: request, mapper: BreedsMapper.map)
-            .subscribe(on: scheduler)
-            .eraseToAnyPublisher()
     }
 }
