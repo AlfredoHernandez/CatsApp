@@ -44,7 +44,8 @@ class BreedsMapperTests: XCTestCase {
             affectionLevel: 4,
             childFriendly: 4,
             dogFriendly: 2,
-            image: anyURL()
+            image: anyURL(),
+            weight: ("1 - 2", "3 - 4")
         )
         let breed1 = makeBreed(
             id: "another-id",
@@ -57,7 +58,8 @@ class BreedsMapperTests: XCTestCase {
             affectionLevel: 2,
             childFriendly: 3,
             dogFriendly: 4,
-            image: nil
+            image: nil,
+            weight: ("0 - 1", " 1 - 2")
         )
         let json = makeItemsJSON([breed0.json, breed1.json])
 
@@ -82,7 +84,8 @@ class BreedsMapperTests: XCTestCase {
         affectionLevel: Int,
         childFriendly: Int,
         dogFriendly: Int,
-        image: URL?
+        image: URL?,
+        weight: (imperial: String, metric: String)
     ) -> (json: [String: Any], model: Breed) {
         let json: [String: Any] = [
             "id": id,
@@ -96,6 +99,10 @@ class BreedsMapperTests: XCTestCase {
             "child_friendly": childFriendly,
             "dog_friendly": dogFriendly,
             "image": ["url": image?.absoluteString],
+            "weight": [
+                "imperial": weight.imperial,
+                "metric": weight.metric,
+            ],
         ]
         let model = Breed(
             id: id,
@@ -108,7 +115,8 @@ class BreedsMapperTests: XCTestCase {
             affectionLevel: affectionLevel,
             childFriendly: childFriendly,
             dogFriendly: dogFriendly,
-            image: image
+            image: image,
+            weight: weight.metric
         )
         return (json, model)
     }

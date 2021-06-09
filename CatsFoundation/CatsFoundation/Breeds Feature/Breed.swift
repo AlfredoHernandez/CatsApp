@@ -16,6 +16,7 @@ public struct Breed: Equatable {
     public let childFriendly: Int
     public let dogFriendly: Int
     public let image: URL?
+    public let weight: String
 
     public init(
         id: String,
@@ -28,7 +29,8 @@ public struct Breed: Equatable {
         affectionLevel: Int,
         childFriendly: Int,
         dogFriendly: Int,
-        image: URL?
+        image: URL?,
+        weight: String
     ) {
         self.id = id
         self.name = name
@@ -41,5 +43,6 @@ public struct Breed: Equatable {
         self.childFriendly = childFriendly
         self.dogFriendly = dogFriendly
         self.image = image
+        self.weight = weight
     }
 }

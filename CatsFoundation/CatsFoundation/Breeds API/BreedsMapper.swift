@@ -17,6 +17,7 @@ public class BreedsMapper {
         let child_friendly: Int
         let dog_friendly: Int
         let image: RemoteImage?
+        let weight: RemoteWeight
 
         func toModel() -> Breed {
             Breed(
@@ -30,13 +31,19 @@ public class BreedsMapper {
                 affectionLevel: affection_level,
                 childFriendly: child_friendly,
                 dogFriendly: dog_friendly,
-                image: image?.url
+                image: image?.url,
+                weight: weight.metric
             )
         }
     }
 
     private struct RemoteImage: Decodable {
         let url: URL?
+    }
+
+    private struct RemoteWeight: Decodable {
+        let metric: String
+        let imperial: String
     }
 
     enum Error: Swift.Error {
