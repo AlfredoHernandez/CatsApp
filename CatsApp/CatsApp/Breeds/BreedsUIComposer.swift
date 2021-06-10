@@ -10,6 +10,8 @@ import SwiftUI
 class BreedsUIComposer {
     static func composeWith(loader: AnyPublisher<[Breed], Error>) -> BreedsView {
         let store = BreedStore(loader: loader)
-        return BreedsView(store: store, onSelect: { _ in AnyView(EmptyView()) })
+        return BreedsView(store: store, onSelect: { breed in
+            AnyView(BreedDetailsView(breed: breed))
+        })
     }
 }

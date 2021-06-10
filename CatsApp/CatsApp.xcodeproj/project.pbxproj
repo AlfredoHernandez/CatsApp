@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38262CB426714E31003E6265 /* BreedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38262CB326714E31003E6265 /* BreedDetailsView.swift */; };
 		3846710A261BC80000D501AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38467109261BC80000D501AA /* AppDelegate.swift */; };
 		3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710B261BC80000D501AA /* SceneDelegate.swift */; };
 		3846710E261BC80000D501AA /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3846710D261BC80000D501AA /* BreedsView.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38262CB326714E31003E6265 /* BreedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsView.swift; sourceTree = "<group>"; };
 		38467106261BC80000D501AA /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38467109261BC80000D501AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3846710B261BC80000D501AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				3846710D261BC80000D501AA /* BreedsView.swift */,
 				386DE7A32656E31900F452EE /* SpinnerView.swift */,
 				38F044C2265AD35B00F198F8 /* BreedCellView.swift */,
+				38262CB326714E31003E6265 /* BreedDetailsView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38262CB426714E31003E6265 /* BreedDetailsView.swift in Sources */,
 				3846710A261BC80000D501AA /* AppDelegate.swift in Sources */,
 				3846710C261BC80000D501AA /* SceneDelegate.swift in Sources */,
 				38F044C3265AD35B00F198F8 /* BreedCellView.swift in Sources */,
@@ -563,7 +567,7 @@
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CatsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,7 +589,7 @@
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CatsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,7 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				INFOPLIST_FILE = CatsAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,7 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				INFOPLIST_FILE = CatsAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +652,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,7 +675,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HS399QXLRD;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

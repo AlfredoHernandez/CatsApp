@@ -12,7 +12,7 @@ class BreedStore: ObservableObject {
 
     @Published var breeds: [PresentableBreed] = []
     @Published var isLoading: Bool = false
-    var title: String { "Breeds" }
+    var title: String { BreedsPresenter.title }
 
     init(loader: AnyPublisher<[Breed], Error>) {
         self.loader = loader
@@ -31,12 +31,7 @@ class BreedStore: ObservableObject {
     }
 
     private func onReceive(breeds: [Breed]) {
-        self.breeds = breeds.map { breed in
-            PresentableBreed(
-                name: breed.name,
-                imageURL: breed.image
-            )
-        }
+        self.breeds = breeds.map(BreedsPresenter.map)
         isLoading = false
     }
 }
