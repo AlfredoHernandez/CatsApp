@@ -27,6 +27,41 @@ class BreedsCoordinator {
             .eraseToAnyPublisher()
     }
 
+    private func makeTestingLoader() -> AnyPublisher<[Breed], Error> {
+        CurrentValueSubject(
+            [
+                Breed(
+                    id: "abys",
+                    name: "Abyssinian",
+                    origin: "Egypt",
+                    description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+                    temperament: "Active, Energetic, Independent, Intelligent, Gentle",
+                    lifeSpan: "14 - 15",
+                    adaptability: 3,
+                    affectionLevel: 5,
+                    childFriendly: 4,
+                    dogFriendly: 3,
+                    image: nil,
+                    weight: "12 - 15"
+                ),
+                Breed(
+                    id: "abys",
+                    name: "Abyssinian",
+                    origin: "Egypt",
+                    description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+                    temperament: "Active, Energetic, Independent, Intelligent, Gentle",
+                    lifeSpan: "14 - 15",
+                    adaptability: 3,
+                    affectionLevel: 5,
+                    childFriendly: 4,
+                    dogFriendly: 3,
+                    image: nil,
+                    weight: "12 - 15"
+                ),
+            ]
+        ).eraseToAnyPublisher()
+    }
+
     func start() -> UIViewController {
         UIHostingController(
             rootView: BreedsUIComposer.composeWith(loader: selectLoader())
@@ -35,7 +70,9 @@ class BreedsCoordinator {
 
     private func selectLoader() -> AnyPublisher<[Breed], Error> {
         #if DEBUG
-        if UserDefaults.standard.string(forKey: "connectivity") == "offline" {
+        if UserDefaults.standard.string(forKey: "connectivity") == "testing" {
+            return makeTestingLoader()
+        } else if UserDefaults.standard.string(forKey: "connectivity") == "offline" {
             return makeAlwaysFailingLoader()
         }
         #endif
