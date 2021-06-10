@@ -8,7 +8,6 @@ import SwiftUI
 
 struct BreedDetailsView: View {
     let breed: PresentableBreed
-    @State var isLoaded = false
 
     var body: some View {
         ScrollView {
